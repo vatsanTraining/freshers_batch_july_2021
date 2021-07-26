@@ -20,13 +20,6 @@ public class SqlConnection {
 			
 			e.printStackTrace();
 		}
-		finally {
-			try {
-				con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
 				
 		return con;
 	}

@@ -1,0 +1,1 @@
+create table cabdriver (driverId int primary key,driverName varchar(20),rating double);

@@ -16,7 +16,6 @@ public class CabDriverRepoImpl implements Repository<CabDriver> {
 
 	@Override
 	public Collection<CabDriver> findAll() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -24,10 +23,11 @@ public class CabDriverRepoImpl implements Repository<CabDriver> {
 	public boolean add(CabDriver t) {
 
 		boolean result = false;
-		String sql = "insert into cabdriver values(?,?,?)";
+		String sql = "insert into cabdriver2 values(?,?,?)";
 		
-		try(PreparedStatement pstmt = con.prepareStatement(sql)) {
+		try {
 			
+			PreparedStatement pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, t.getDriverId());
 			pstmt.setString(2, t.getDriverName());
 			pstmt.setDouble(3, t.getRating());
