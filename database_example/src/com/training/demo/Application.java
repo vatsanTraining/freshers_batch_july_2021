@@ -16,12 +16,14 @@ public class Application {
 		Connection con =SqlConnection.getMySqlConnection();
 		
 		
-		CabDriver driver = new CabDriver(101, "Ramesh", 4.5);
+		CabDriver driver = new CabDriver(102, "naveen", 4.7);
 		
 		Repository<CabDriver> repo = new CabDriverRepoImpl(con);
 		
-		System.out.println("Is Added:="+repo.add(driver));
+		//System.out.println("Is Added:="+repo.add(driver));
 		
+		 repo.findAll().forEach(System.out::println);
+		 
 	}
 
 }

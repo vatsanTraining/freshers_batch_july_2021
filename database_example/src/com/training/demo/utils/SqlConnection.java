@@ -11,12 +11,15 @@ public class SqlConnection {
 		
 		try {
 		
-			Class.forName("com.mysql.cj.jdbc.Driver");
+//			Class.forName("com.mysql.cj.jdbc.Driver");
+//			
+			
+			   
 			
 			con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", 
 					            "root", "srivatsan");
 			
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (SQLException  e) {
 			
 			e.printStackTrace();
 		}
