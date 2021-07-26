@@ -14,9 +14,16 @@ public class Application {
 		Collection<Invoice> invCollection = (Collection<Invoice>) collection;
 		
 		for(Invoice eachInvoice: invCollection) {
+			
 			System.out.println(eachInvoice);
 		}
 	}
+	
+	
+
+
+
+
 	public static void main(String[] args) {
 
 		
@@ -32,6 +39,8 @@ public class Application {
 		 
 		 
 		 List<Invoice> list = repo.getAll();
+		 
+		 printElements(list);
 		 
 	}
 
