@@ -16,10 +16,13 @@ public class Application {
 		
 		Collection<Invoice> invCollection = (Collection<Invoice>) collection;
 		
-		for(Invoice eachInvoice: invCollection) {
-			
-			System.out.println(eachInvoice);
-		}
+//		for(Invoice eachInvoice: invCollection) {
+//			
+//			System.out.println(eachInvoice);
+//		}
+		
+		 invCollection.forEach(System.out::println);
+		 
 	}
 	
 	
@@ -46,8 +49,12 @@ public class Application {
 		 FileHandlingService service = new FileHandlingService(list);
 		 
 		  try {
-			System.out.println("File Created :="+service.writeToFile("invoice.txt"));
-		} catch (IOException e) {
+			System.out.println("File Created :="+service.writeToFile("invoice.csv"));
+	
+			  Set<Invoice> invList= service.readFromFile("invoice.csv");
+			  printElements(invList);
+		  
+		  } catch (IOException e) {
 			e.printStackTrace();
 		}
 		  

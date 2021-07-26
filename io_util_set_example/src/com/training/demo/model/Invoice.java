@@ -13,7 +13,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Invoice {
+public class Invoice implements Comparable<Invoice>{
 
 	int invoiceNumber;
 	String customerName;
@@ -22,6 +22,13 @@ public class Invoice {
 	public String toString() {
 		return invoiceNumber + ","+ customerName+ "," +amount;
 		
+	}
+	@Override
+	public int compareTo(Invoice o) {
+		
+		if(this.invoiceNumber<o.invoiceNumber) return 1;
+		if(this.invoiceNumber>o.invoiceNumber) return -1;
+		return 0;
 	}
 	
 	

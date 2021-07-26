@@ -1,7 +1,9 @@
 package com.training.demo;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
+import java.util.List;import java.util.TooManyListenersException;
+import java.util.stream.Collectors;
 
 import com.training.demo.ifaces.Repository;
 import com.training.demo.model.Invoice;
@@ -40,6 +42,9 @@ public class Application {
 		 
 		 List<Invoice> list = repo.getAll();
 		 
+		  
+		  
+		  
 		 printElements(list);
 		 
 	}
