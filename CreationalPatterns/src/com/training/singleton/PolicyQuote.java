@@ -26,14 +26,7 @@ public class PolicyQuote {
 		super();
 		System.out.println("Constructor Called");
 	}
-	public PolicyQuote(String policyName, long tenure, double premium,
-			String paymentMode) {
-		super();
-		this.policyName = policyName;
-		this.tenure = tenure;
-		this.premium = premium;
-		this.paymentMode = paymentMode;
-	}
+	
 	public String getPolicyName() {
 		return policyName;
 	}
