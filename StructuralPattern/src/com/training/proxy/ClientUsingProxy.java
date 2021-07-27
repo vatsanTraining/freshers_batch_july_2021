@@ -7,7 +7,7 @@ public class ClientUsingProxy {
 		
 		 InterNetAccess proxy=new ProxyInterNetAccess();
 		 
-		      proxy.setEmpGrade(2);
+		      proxy.setEmpGrade(21);
 		      proxy.grantPermission();
 		     
 		     
