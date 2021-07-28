@@ -12,6 +12,8 @@ import com.training.demo.services.InvoiceRepositoryImplemetation;
 public class Application {
 
 	public static void printElements(Collection<?> collection) {
+
+		// comment
 		
 		Collection<Invoice> invCollection = (Collection<Invoice>) collection;
 		

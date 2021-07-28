@@ -14,9 +14,10 @@ import lombok.NoArgsConstructor;
 public class Order {
 
 
+	@Autowired
 	private Item item;
 
-	// constructor DI
+//	// constructor DI
 	@Autowired
 	public Order(@Qualifier(value = "fridge") Item item) {
 		super();

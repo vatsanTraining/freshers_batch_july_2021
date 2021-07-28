@@ -31,7 +31,7 @@ public class TestGreeting {
 	public void testGreet() {
 		
 		
-		assertEquals("Good Morning", grtObj.greet());
+		assertEquals("Unit Testing", grtObj.greet());
 	}
 	
 	@Test
@@ -40,12 +40,12 @@ public class TestGreeting {
 		
 		int actualLength = grtObj.greet().length();
 		
-		assertEquals(6, actualLength);
+		assertEquals(12, actualLength);
 	}
 
 	
 	@Ignore
-	@Test
+	@Test(expected = RuntimeException.class)
 	public void testGreetForNotNull() {
 		
 		fail("Not yet implemented");

@@ -55,15 +55,15 @@ public class SpringBootQuickstartApplication {
 	public Order tvOrder() {
 		
 		Order order = new Order();
-		 order.setItem(tv());
+		// order.setItem(tv());
 		 
 		 return order;
 	}
 	
 	@Bean
 	public Order lapTopOrder() {
-		
-		return new Order(laptop());
+		return null;
+		//return new Order(laptop());
 	}
 	
 }
