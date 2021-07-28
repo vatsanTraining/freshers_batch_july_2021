@@ -19,7 +19,8 @@ public class InvoiceService {
 		    for(Invoice eachInvoice:filteredList) {
 		    	
 		    	double actualAmount = eachInvoice.getAmount();
-		    	double discountedAmount =	actualAmount -actualAmount * discount/100.0;
+		    	double discountedAmount =	
+		    			   actualAmount -actualAmount * discount/100.0;
 		    	
 		    	eachInvoice.setAmount(discountedAmount);
 		    	
