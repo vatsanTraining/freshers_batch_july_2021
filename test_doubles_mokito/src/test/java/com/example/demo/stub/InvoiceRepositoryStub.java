@@ -11,5 +11,4 @@ public class InvoiceRepositoryStub implements InvoiceRepository {
 		return Arrays.asList(new Invoice(709,"Vikas",7000),new Invoice(710,"uma",6000));
 		
 	}
-
 }
