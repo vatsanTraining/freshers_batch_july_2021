@@ -3,7 +3,9 @@ package com.example.demo.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +26,18 @@ public class RestaurantController {
 		return this.service.findAll();
 	}
 	
+//	@GetMapping(path = "/restaurants/{id}")
+//	public Restaurant findById(@PathVariable("id") int id){
+//		
+//		//todo
+//	}
+//	
+//	@DeleteMapping(path = "/restaurants")
+//	public Restaurant remove(@RequestBody Restaurant entity){
+//		
+//		//todo
+//	}
+	
 
 	@PostMapping(path = "/restaurants")
 	public ResponseEntity<Restaurant> add(@RequestBody Restaurant entity){
@@ -32,6 +46,7 @@ public class RestaurantController {
 		
 		return ResponseEntity.status(HttpStatus.CREATED).body(addedEntity);		
 	}
+	
 	
 	
 }
