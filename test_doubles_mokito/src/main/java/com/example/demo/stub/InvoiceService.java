@@ -16,6 +16,7 @@ public class InvoiceService {
 		
 		    List<Invoice> filteredList = repo.findAllByAmountGt(amount);
 		
+		    System.out.println(filteredList);
 		    for(Invoice eachInvoice:filteredList) {
 		    	
 		    	double actualAmount = eachInvoice.getAmount();
