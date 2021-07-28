@@ -16,8 +16,7 @@ public class TestWithMockitoAnnotation {
 
 	  @Mock
 	  InvoiceRepository repoMock;
-	 
-	 
+	 	 
 	  @InjectMocks
 	  InvoiceService service ;
 	   
@@ -27,12 +26,12 @@ public class TestWithMockitoAnnotation {
 		   MockitoAnnotations.initMocks(this);
 	   }
 
-	  @Test
-		@DisplayName("This method verifies with custom created Mock")
+	    @Test
+		@DisplayName("This method verifies with Mockito Framework")
 		public void testIvoiceAdd() {
 
 			
-			Invoice inv1 = new Invoice(201,"Naveen", 8000);
+			Invoice inv1 = new Invoice(201,"Naveen", 6000);
 			Invoice inv2 = new Invoice(202,"Vignesh", 6000);
 			
 			  
