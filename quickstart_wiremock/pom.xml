@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>restaurant-info-service</artifactId>
+	<artifactId>quickstart_wiremock</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>restaurant-info-service</name>
+	<name>quickstart_wiremock</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -19,50 +19,29 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		
-		<dependency>
-  <groupId>org.springframework.boot</groupId>
-  <artifactId>spring-boot-starter-test</artifactId>
-  <scope>test</scope>
-  <exclusions>
-    <exclusion>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-    </exclusion>
-  </exclusions>
-</dependency>
-
+		<!-- https://mvnrepository.com/artifact/com.github.tomakehurst/wiremock -->
 <dependency>
-  <groupId>org.junit.jupiter</groupId>
-  <artifactId>junit-jupiter-engine</artifactId>
-  <scope>test</scope>
+    <groupId>com.github.tomakehurst</groupId>
+    <artifactId>wiremock</artifactId>
+    <version>2.27.2</version>
+    <type>pom</type>
+    <scope>test</scope>
 </dependency>
-		<dependency>
-  <groupId>org.mockito</groupId>
-  <artifactId>mockito-core</artifactId>
-  <scope>test</scope>
+		
+		<!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
+<dependency>
+    <groupId>com.squareup.okhttp3</groupId>
+    <artifactId>okhttp</artifactId>
+    <scope>test</scope>
 </dependency>
 		
 	</dependencies>
@@ -72,14 +51,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

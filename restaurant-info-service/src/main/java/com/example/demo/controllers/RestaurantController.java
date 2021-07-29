@@ -26,11 +26,11 @@ public class RestaurantController {
 		return this.service.findAll();
 	}
 	
-//	@GetMapping(path = "/restaurants/{id}")
-//	public Restaurant findById(@PathVariable("id") int id){
-//		
-//		//todo
-//	}
+	@GetMapping(path = "/restaurants/{id}")
+	public Restaurant findById(@PathVariable("id") int id){
+		
+		  return this.service.findById(id).get();
+	}
 //	
 //	@DeleteMapping(path = "/restaurants")
 //	public Restaurant remove(@RequestBody Restaurant entity){
